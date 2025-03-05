@@ -22,6 +22,7 @@ function handleRequest(req, res) {
     sendHtmlResponse(res, filePath);
   } else if (req.url === "/profile/pic") {
     // serving an image.
+    // const imageName = req.url.split("/profile/pic/")[1];
     const imgPath = path.join(__dirname, "assets", "doctor.png");
     sendImageResponse(res, imgPath);
   } else {
